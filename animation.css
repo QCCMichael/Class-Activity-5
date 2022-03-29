@@ -1,0 +1,143 @@
+.title{
+  background-color: darkblue;
+  color: lightgray;
+  text-align: center;
+  padding:12px;
+}
+.container{
+  width: 80%
+  margin-left:auto;
+  margin-right:auto;
+  border: outset 20px darkgray;
+  position: relative;
+  overFlow: hidden;
+}
+.background{
+width: 100%;
+}
+.bus{
+  width: 30%
+  bottom: 0%;
+  right: -150px;
+  position: absolute;
+  animation-name: slideLeftRight;
+  animation-duration: 5s;
+  animation-iteration-count: 2;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
+  animation-timing-function: ease-out;
+}
+@keyframes slideLeftRight{
+  from{transform: translateX(0%);}
+  to{transform: translateX(-250%);}
+}
+.cloud1{
+  position: absolute;
+width: 20%;
+  top:0%;
+  left:-10%;
+  animation-name: slideClouds;
+  animation-duration: 6s;
+  animation-iteration-count:infinite;
+}
+.cloud2{
+  position:absolute;
+  width: 20%;
+  top: -10%;
+  left: -20%;
+  animation: slideClouds 10s infinite;
+}
+.cloud3{
+  position: absolute;
+  width:20%;
+  top:5%;
+  left:-50%;
+  animation: slideClouds 13s infinite;
+}
+@keyframes slideClouds{
+  0%{transform: translateX(0%); opacity: 0.9;}
+  100%{transform:translateX(300%); opacity: 0.3;}
+}
+.sun{
+  position: absolute;
+  width: 18%;
+  top: 1%;
+  left: 0%;
+  animation: slideSun 5s;
+}
+@keyframes slideSun {
+0%{transform: translate(0,0) rotate(0deg); opacity: 0.9;}
+50%{transform: translate(100px, 100px) rotate(180deg); opacity:0.3;}
+100%{transform: translate(250px, -30px) rotate(-60deg);opacity: 0.7;}
+}
+.msg{
+  position: absolute;
+  top:40%;
+  bottom: 40%;
+  left:20%;
+  right:20%
+  text-align: center;
+  animation:zoomMSG 10s forwards;
+}
+@keyframes zoomMSG{
+0%{transform: scale(1) translate(0,0);}
+25%{transform:scale(0.3); color:red;}
+50%{transform:scale(2) translate(100px,50px); color: green;}
+75%{transform:scale(0.5); color:orange;}
+100%{transform:scale(0) translate(-200px,-300px); color:blue;}
+}
+html{
+  scroll-behavior: smooth;
+}
+.horizontalNabs{
+background-color: purple;
+color: lightgray;
+height: 30px;
+}
+.horizontalNabs a{
+  color: lightgray;
+  display:inline-block;
+  width: 28.7%;
+  border: ridge 1px lightgray;
+  float: right;
+  height: 100%;
+  text-align: center;
+  padding: 10px 0px;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+.horizontalNabs a:hover{
+  background-color: darkblue;
+  text-decoration: underline;
+}
+.horizontalNabs span{
+  border: ridge 1px lightgray;
+  font-family: algerian;
+  display: block;
+  width: 39%;
+  height: 100%;
+  float:left;
+  border-top: ridge 1px lightgray;
+  padding: 8px 20px;
+  font-size: 1.8em;
+}
+.VerticalNavs li{
+  padding: 10px 20px;
+  border-color: orange;
+  list-style-type: none;
+  border: ridge 1px lightgray;
+  text-align: center;
+}
+.VerticalNavs li a{
+text-decoration: none;
+font-size: 1.2em;
+color: lightgray;
+}
+.VerticalNavs li:hover{
+  background-color: darkgreen;
+  text-decoration: underline;
+}
+footer{
+  text-align: center
+}
